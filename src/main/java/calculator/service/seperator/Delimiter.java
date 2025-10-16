@@ -1,12 +1,12 @@
 package calculator.service.seperator;
 
-public enum Separators {
+public enum Delimiter {
     COLON(":"), COMMA(",")
     ;
 
     private final String seperator;
 
-    Separators(String seperator) {
+    Delimiter(String seperator) {
         this.seperator = seperator;
     }
 
