@@ -8,6 +8,7 @@ public class AddCalculatorController {
 
     private static AddCalculatorController instance;
     private final Calculator calculator;
+
     private AddCalculatorController(Calculator calculator) {
         this.calculator = calculator;
     }

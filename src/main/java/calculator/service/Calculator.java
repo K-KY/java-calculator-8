@@ -9,6 +9,8 @@ import java.util.List;
 
 public class Calculator {
 
+    private static final String INVALID_RANGE = "허용 범위를 벗어난 숫자입니다.";
+
     public Integer add(Expression expression) {
         List<String> separate = SeparatorFactory.separate(expression);
         ExpressionValidator.validate(separate);
@@ -16,7 +18,7 @@ public class Calculator {
             List<Integer> numbers = IntegerConverter.convert(separate);
             return numbers.stream().reduce(0, Math::addExact);
         } catch (ArithmeticException e) {
-            throw new IllegalArgumentException("허용 범위를 벗어난 숫자입니다.");
+            throw new IllegalArgumentException(INVALID_RANGE);
         }
     }
 }

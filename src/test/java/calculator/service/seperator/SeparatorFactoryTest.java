@@ -23,6 +23,4 @@ class SeparatorFactoryTest {
         Expression expression = new Expression("123:123,123", List.of());
         assertThat(SeparatorFactory.separate(expression)).allMatch(s -> s.equals("123"));
     }
-
-
 }
