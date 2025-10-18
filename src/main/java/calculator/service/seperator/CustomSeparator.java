@@ -1,5 +1,7 @@
 package calculator.service.seperator;
 
+import calculator.service.dto.Expression;
+
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -13,7 +15,8 @@ public class CustomSeparator implements Separator {
     }
 
     @Override
-    public List<String> separate(String target) {
+    public List<String> separate(Expression expression) {
+        String target = expression.expression();
         target = target.replace(delimiter, SPACE);
         return Stream.of(target.split(SPACE)).filter(s -> !s.isEmpty()).collect(Collectors.toList());
     }
