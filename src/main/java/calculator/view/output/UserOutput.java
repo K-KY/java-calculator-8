@@ -9,8 +9,4 @@ public class UserOutput {
     public static void println(String message) {
         printStream.println(message);
     }
-
-    public static void println(Integer message) {
-        printStream.println(message);
-    }
 }

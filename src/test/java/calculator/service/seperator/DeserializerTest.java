@@ -20,7 +20,7 @@ class DeserializerTest {
     @Test
     @DisplayName("사용자 정의 구분자 있음")
     void customParse() {
-        Expression parse = Deserializer.parse("//;\n123;123;123");
+        Expression parse = Deserializer.parse("//;\\n123;123;123");
         assertThat(parse.delimiter().getFirst()).isEqualTo(";");
         assertThat(parse.expression()).isEqualTo("123;123;123");
     }
