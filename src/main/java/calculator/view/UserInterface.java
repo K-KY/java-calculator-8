@@ -14,6 +14,6 @@ public class UserInterface {
     }
 
     public void printResult(Integer result) {
-        UserOutput.println(result);
+        UserOutput.println(Messages.INPUT_RESULT.getMessage() + result);
     }
 }
