@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Deserializer {
 
-    private static final String CUSTOM_EXIT = "\\n";
+    private static final String CUSTOM_EXIT = "\\\\n";
     private static final String CUSTOM_ENTRY = "//";
     private static final String EMPTY = "";
 
